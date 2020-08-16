@@ -30,8 +30,8 @@ export default function Clients() {
             "alt" : "Clients 05"
         }
     ];
-    const image = images.map((images) => 
-        <li><img src={images.img} alt={images.alt}/></li>
+    const image = images.map((images,index) => 
+        <li key={index}><img src={images.img} alt={images.alt}/></li>
     );
     return (
         <Section className="clients">

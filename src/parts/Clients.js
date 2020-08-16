@@ -35,7 +35,7 @@ export default function Clients() {
     );
     return (
         <Section className="clients">
-            <Fade bottom distance="10px">
+            <Fade bottom distance="50px">
             <div className="container">
                 <div className="clients-inner section-inner has-top-divider has-bottom-divider">
                     <ul className="list-reset">

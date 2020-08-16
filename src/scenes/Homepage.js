@@ -42,14 +42,14 @@ export default function Homepage() {
                 <div className="container-sm">
                     <div className="hero-inner section-inner">
                         <div className="hero-content">
-                            <Fade distance="10px" bottom delay={200}>
+                            <Fade distance="50px" bottom delay={200}>
                             <h1
                                 className="mt-0 mb-16"
                             >
                                 Landing template for startups
                             </h1>
                             </Fade>
-                            <Fade distance="10px" bottom delay={400}>
+                            <Fade distance="50px" bottom delay={400}>
                             <div className="container-xs">
                                 <p
                                     className="mt-0 mb-32"
@@ -61,7 +61,7 @@ export default function Homepage() {
                             </div>
                             </Fade>
                         </div>
-                        <Fade bottom distance="10px" delay={800}>
+                        <Fade bottom distance="50px" delay={800}>
                         <div
                             className="hero-figure illustration-element-01"
                         >

@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 export default function Feature(props) {
     return (
         <div className="tiles-item">
-            <Fade bottom delay={props.delayInMS}>
+            <Fade bottom delay={props.delayInMS} distance="50px">
             <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                     <div

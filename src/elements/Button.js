@@ -10,7 +10,7 @@ export default function Button(props) {
         className.push("button-wide-mobile");
     if (props.isSmall) 
         className.push("button-sm");    
-    return <div className={className.join(" ")}>{props.children}</div>;
+    return <button className={className.join(" ")}>{props.children}</button>;
 }
 
 Button.propTypes = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 import logo from 'assets/images/logo.svg';
 import { NavLink } from 'react-router-dom';
@@ -6,6 +7,7 @@ import Button from 'elements/Button';
 
 export default function Header(props) {
     return (
+        <Fade bottom distance="10px">
         <header className="site-header">
             <div className="container">
                 <div className="site-header-inner">
@@ -48,5 +50,6 @@ export default function Header(props) {
                 </div>
             </div>
         </header>
+        </Fade>
     )
 }

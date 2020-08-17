@@ -8,6 +8,7 @@ import Button from 'elements/Button';
 import Clients from 'parts/Clients';
 import Feature from 'parts/Feature';
 import Header from 'parts/Header';
+import Footer from 'parts/Footer';
 
 import HeroImage from 'assets/images/hero-image.png';
 import FeatureTittleIcon01 from 'assets/images/feature-tile-icon-01.svg';
@@ -39,39 +40,39 @@ export default function Homepage() {
 
     const listPricing = [
         {
-            Price : 60,
-            currencySymbbol : "$",
-            description : "Lorem ipsum is a common text",
-            features : [
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: false, content: "Excepteur sint occaecat velit"},
-                {isChecked: false, content: "Excepteur sint occaecat velit"},
+            Price: 60,
+            currencySymbbol: "$",
+            description: "Lorem ipsum is a common text",
+            features: [
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: false, content: "Excepteur sint occaecat velit" },
+                { isChecked: false, content: "Excepteur sint occaecat velit" },
             ]
         },
         {
-            Price : 110,
-            currencySymbbol : "$",
-            description : "Lorem ipsum is a common text",
-            features : [
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: false, content: "Excepteur sint occaecat velit"},
+            Price: 110,
+            currencySymbbol: "$",
+            description: "Lorem ipsum is a common text",
+            features: [
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: false, content: "Excepteur sint occaecat velit" },
             ]
         },
         {
-            Price : 147,
-            currencySymbbol : "$",
-            description : "Lorem ipsum is a common text",
-            features : [
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
-                {isChecked: true, content: "Excepteur sint occaecat velit"},
+            Price: 147,
+            currencySymbbol: "$",
+            description: "Lorem ipsum is a common text",
+            features: [
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
+                { isChecked: true, content: "Excepteur sint occaecat velit" },
             ]
         }
     ]
@@ -139,37 +140,35 @@ export default function Homepage() {
                                         Simple, transarent pricing
                                 </h2>
                                     <p className="m-0">
-                                        Lorem ipsum is common placeholder text
-                                        used to demonstrate the graphic elements
-                                        of a document or visual presentation.
-                                </p>
+                                        Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.
+                                    </p>
                                 </div>
                             </div>
                             <div className="tiles-wrap">
                                 {
                                     listPricing.map((list, index) => {
                                         return (
-                                            <Card key={index} delayInMS={index*200} hasShadow className="">
-                                            <div class="pricing-item-content">
-                                                <div class="pricing-item-header pb-24 mb-24">
-                                                    <div class="pricing-item-price mb-4">
-                                                    <span class="pricing-item-price-currency h2">{list.currencySymbbol}</span>
-                                                    <span class="pricing-item-price-amount h1 pricing-switchable">{list.Price}</span>
+                                            <Card key={index} delayInMS={index * 200} hasShadow className="">
+                                                <div class="pricing-item-content">
+                                                    <div class="pricing-item-header pb-24 mb-24">
+                                                        <div class="pricing-item-price mb-4">
+                                                            <span class="pricing-item-price-currency h2">{list.currencySymbbol}</span>
+                                                            <span class="pricing-item-price-amount h1 pricing-switchable">{list.Price}</span>
+                                                        </div>
+                                                        <div class="text-xs text-color-low">
+                                                            {list.description}
+                                                        </div>
                                                     </div>
-                                                    <div class="text-xs text-color-low">
-                                                        {list.description}
+                                                    <div class="pricing-item-features mb-40">
+                                                        <div class="pricing-item-features-title h6 text-xs text-color-high mb-24">
+                                                            What’s included
+                                                    </div>
+                                                        <Lists data={list.features} isSmall className="pricing-item-features-list mb-32"></Lists>
                                                     </div>
                                                 </div>
-                                                <div class="pricing-item-features mb-40">
-                                                    <div class="pricing-item-features-title h6 text-xs text-color-high mb-24">
-                                                        What’s included
-                                                    </div>
-                                                    <Lists data={list.features} isSmall className="pricing-item-features-list mb-32"></Lists>
+                                                <div class="pricing-item-cta mb-8">
+                                                    <Button isPrimary isBlock>Start free trial</Button>
                                                 </div>
-                                            </div>
-                                            <div class="pricing-item-cta mb-8">
-                                                <Button isPrimary isBlock>Start free trial</Button>
-                                            </div>
                                             </Card>
                                         );
                                     })
@@ -179,6 +178,7 @@ export default function Homepage() {
                     </div>
                 </Section>
             </main>
+            <Footer></Footer>
         </div>
     )
 }

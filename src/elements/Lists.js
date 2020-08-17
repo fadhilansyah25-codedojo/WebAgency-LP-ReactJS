@@ -9,7 +9,7 @@ export default function Lists(props) {
     className.push("text-xs");
   }
   return (
-    <ul className={`pricing-item-features-list mb-32 ${className.join(" ")}`}>
+    <ul className={className.join(" ")}>
       {props.data.map((list, index) => 
         <li key={index} className={list.isChecked ? "is-checked" : ""}>{list.content}</li>
       )}

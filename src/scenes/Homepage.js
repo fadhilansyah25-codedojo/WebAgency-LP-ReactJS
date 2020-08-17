@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 import Section from 'elements/Section';
 import Card from 'elements/Card';
 import Lists from 'elements/Lists';
+import Button from 'elements/Button';
 import Clients from 'parts/Clients';
 import Feature from 'parts/Feature';
 import Header from 'parts/Header';
@@ -38,7 +39,7 @@ export default function Homepage() {
 
     const listPricing = [
         {
-            Price : 27,
+            Price : 60,
             currencySymbbol : "$",
             description : "Lorem ipsum is a common text",
             features : [
@@ -50,7 +51,7 @@ export default function Homepage() {
             ]
         },
         {
-            Price : 47,
+            Price : 110,
             currencySymbbol : "$",
             description : "Lorem ipsum is a common text",
             features : [
@@ -62,7 +63,7 @@ export default function Homepage() {
             ]
         },
         {
-            Price : 67,
+            Price : 147,
             currencySymbbol : "$",
             description : "Lorem ipsum is a common text",
             features : [
@@ -148,7 +149,7 @@ export default function Homepage() {
                                 {
                                     listPricing.map((list, index) => {
                                         return (
-                                            <Card key={index} hasShadow className="">
+                                            <Card key={index} delayInMS={index*200} hasShadow className="">
                                             <div class="pricing-item-content">
                                                 <div class="pricing-item-header pb-24 mb-24">
                                                     <div class="pricing-item-price mb-4">
@@ -165,6 +166,9 @@ export default function Homepage() {
                                                     </div>
                                                     <Lists data={list.features} isSmall className="pricing-item-features-list mb-32"></Lists>
                                                 </div>
+                                            </div>
+                                            <div class="pricing-item-cta mb-8">
+                                                <Button isPrimary isBlock>Start free trial</Button>
                                             </div>
                                             </Card>
                                         );

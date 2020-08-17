@@ -148,7 +148,25 @@ export default function Homepage() {
                                 {
                                     listPricing.map((list, index) => {
                                         return (
-                                            <Card hasShadow className=""></Card>
+                                            <Card key={index} hasShadow className="">
+                                            <div class="pricing-item-content">
+                                                <div class="pricing-item-header pb-24 mb-24">
+                                                    <div class="pricing-item-price mb-4">
+                                                    <span class="pricing-item-price-currency h2">{list.currencySymbbol}</span>
+                                                    <span class="pricing-item-price-amount h1 pricing-switchable">{list.Price}</span>
+                                                    </div>
+                                                    <div class="text-xs text-color-low">
+                                                        {list.description}
+                                                    </div>
+                                                </div>
+                                                <div class="pricing-item-features mb-40">
+                                                    <div class="pricing-item-features-title h6 text-xs text-color-high mb-24">
+                                                        What’s included
+                                                    </div>
+                                                    <Lists data={list.features} isSmall className="pricing-item-features-list mb-32"></Lists>
+                                                </div>
+                                            </div>
+                                            </Card>
                                         );
                                     })
                                 }
